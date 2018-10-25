@@ -3,10 +3,18 @@ var dragndrop = (function() { // sel executed protected namespace variable
         offsetY = "", // grapping the vertical offset
         whichArt = ""; // grapping the art element
 
+    function resetZIndex() { // creating a reset function for the z-index
+        var elements = document.querySelectorAll("img"); // grap all the imgs
+        for (let i = elements.length - 1; i >= 0; i--) { // loop through them and set the z-index to 5
+            elements[i].style.zIndex = 5;
+        }
+    };
+
     function moveStart(e) {
         whichArt = e.target; // grapping the targeted element in the variable
         offsetX = e.offsetX === "undefined" ? e.layerX : e.offsetX; // set a polyfill for the X offset variable
         offsetY = e.offsetY === "undefined" ? e.layerY : e.offsetY; // set a polyfill for the Y offset variable
+        resetZIndex(); // call the reset z-index function for all imgs
         whichArt.style.zIndex = 10; // reset the index to be on the top of any element when moving
     };
 
