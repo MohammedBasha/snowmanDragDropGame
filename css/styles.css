@@ -1,0 +1,159 @@
+body {
+    background-color: #e4e8f7;
+    margin: auto;
+    padding: 0;
+}
+
+[draggable] {
+    cursor: move;
+}
+
+img {
+    position: absolute;
+    z-index: 5;
+}
+
+#snowman {
+    left: 50px;
+    top: 120px;
+}
+
+#mouth03 {
+    left: 367px;
+    top: 150px;
+}
+
+#neck01 {
+    left: 333px;
+    top: 201px;
+}
+
+#neck02 {
+    left: 342px;
+    top: 341px;
+}
+
+#neck03 {
+    left: 349px;
+    top: 484px;
+}
+
+#head03 {
+    left: 515px;
+    top: 417px;
+}
+
+#nose03 {
+    left: 525px;
+    top: 294px;
+}
+
+#hand_left01 {
+    left: 517px;
+    top: 141px;
+}
+
+#hand_right01 {
+    left: 772px;
+    top: 150px;
+}
+
+#eyes03 {
+    left: 661px;
+    top: 138px;
+}
+
+#nose01 {
+    left: 532px;
+    top: 357px;
+}
+
+#head06 {
+    left: 965px;
+    top: 112px;
+}
+
+#head05 {
+    left: 963px;
+    top: 254px;
+}
+
+#neck04 {
+    left: 527px;
+    top: 518px;
+}
+
+#eyes01 {
+    left: 669px;
+    top: 368px;
+}
+
+#eyes02 {
+    left: 663px;
+    top: 286px;
+}
+
+#eyes04 {
+    left: 655px;
+    top: 208px;
+}
+
+#head01 {
+    left: 803px;
+    top: 402px;
+}
+
+#head02 {
+    left: 965px;
+    top: 399px;
+}
+
+#head04 {
+    left: 988px;
+    top: 550px;
+}
+
+#hand_right02 {
+    left: 871px;
+    top: 523px;
+}
+
+#neck05 {
+    left: 820px;
+    top: 338px;
+}
+
+#mouth01 {
+    left: 834px;
+    top: 273px;
+}
+
+#mouth02 {
+    left: 863px;
+    top: 239px;
+}
+
+#hand_left02 {
+    left: 818px;
+    top: 574px; 
+}
+
+#eyes06 {
+    left: 627px;
+    top: 416px;
+}
+
+#eyes05 {
+    left: 638px;
+    top: 496px;
+}
+
+#belt {
+    left: 612px;
+    top: 533px;
+}
+
+#nose02 {
+    left: 529px;
+    top: 230px;
+}
