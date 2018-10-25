@@ -28,9 +28,28 @@ var dragndrop = (function() { // sel executed protected namespace variable
         whichArt.style.top = e.pageY - offsetY + "px"; // calculate the Y offset if the clicked element right now
     };
 
+    function touchStart(e) {
+        e.preventDefault();
+        var whichArt = e.target,
+            touch = e.touches[0],
+            moveOffsetX = whichArt.offsetLeft - touch.pageX,
+            moveOffsetY = whichArt.offsetTop - touch.pageY;
+            resetZIndex();
+            whichArt.style.zIndex = 10;
+
+        whichArt.addEventListener("touchmove", function () {
+            var positionX = touch.pageX + moveOffsetX,
+                positionY = touch.pageY + moveOffsetY;
+            whichArt.style.left = positionX + "px";
+            whichArt.style.top = positionY + "px";
+        }, false);
+    };
+
         document.body.addEventListener("dragstart", moveStart, false); // set an event handler for the dragstart event
 
         document.body.addEventListener("dragover", moveDragOver, false); // set an event handler for the dragover event
 
         document.body.addEventListener("drop", moveDrop, false); // set an event handler for the drop event
+
+        document.body.addEventListener("touchstart", touchStart, false); // set an event handler for the touchstart event for mobile devices
 }());
