@@ -10,5 +10,19 @@ var dragndrop = (function() { // sel executed protected namespace variable
         whichArt.style.zIndex = 10; // reset the index to be on the top of any element when moving
     };
 
+    function moveDragOver(e) {
+        e.preventDefault(); // preventing the default behavior of different browsers
+    };
+
+    function moveDrop(e) {
+        e.preventDefault(); // preventing the default behavior of different browsers
+        whichArt.style.left = e.pageX - offsetX + "px"; // calculate the X offset if the clicked element right now
+        whichArt.style.top = e.pageY - offsetY + "px"; // calculate the Y offset if the clicked element right now
+    };
+
         document.body.addEventListener("dragstart", moveStart, false); // set an event handler for the dragstart event
+
+        document.body.addEventListener("dragover", moveDragOver, false); // set an event handler for the dragover event
+
+        document.body.addEventListener("drop", moveDrop, false); // set an event handler for the drop event
 }());
